@@ -1,0 +1,35 @@
+@import "./colors.scss";
+
+.card {
+  border-radius: 8px;
+  background-color: $dark-300;
+
+  .theme--light & {
+    color: $dark-500;
+    background-color: white;
+  }
+}
+
+.status {
+  &--paid {
+    color: #33d69f;
+    background-color: hsla(160, 67%, 52%, 0.06);
+  }
+  &--pending {
+    color: #ff8f00;
+    background-color: rgba(255, 145, 0, 0.06);
+  }
+  &--draft {
+    color: #373b53;
+    background-color: hsla(231, 20%, 27%, 0.06);
+
+    .theme--dark & {
+      color: $light-blue-gray;
+      background-color: hsla(231, 73%, 93%, 0.06);
+    }
+  }
+}
+
+.no-background-hover::before {
+  background-color: transparent !important;
+}
